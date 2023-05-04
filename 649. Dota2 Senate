@@ -1,0 +1,30 @@
+#Java
+
+import java.util.ArrayDeque;
+import java.util.Queue;
+
+class Solution {
+    public String predictPartyVictory(String senate) {
+        int n = senate.length();
+        Queue<Integer> rq = new ArrayDeque<>(); // Radiant senators
+        Queue<Integer> dq = new ArrayDeque<>(); // Dire senators
+        for (int i = 0; i < n; i++) {
+            char c = senate.charAt(i);
+            if (c == 'R') {
+                rq.offer(i);
+            } else {
+                dq.offer(i);
+            }
+        }
+        while (!rq.isEmpty() && !dq.isEmpty()) {
+            int r = rq.poll();
+            int d = dq.poll();
+            if (r < d) {
+                rq.offer(r + n);
+            } else {
+                dq.offer(d + n);
+            }
+        }
+        return rq.isEmpty() ? "Dire" : "Radiant";
+    }
+}
