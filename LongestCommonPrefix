@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+class Solution {
+    public static String longestCommonPrefix(String[] strings) {
+        if (strings == null || strings.length == 0) {
+            return "";
+        }
+        int minl = Integer.MAX_VALUE;
+        for (String str : strings) {
+            minl = Math.min(minl, str.length());
+        }
+
+        StringBuilder prefix = new StringBuilder();
+        for (int i = 0; i < minl; i++) {
+            char curr = strings[0].charAt(i);
+            for (int j = 1; j < strings.length; j++) {
+                if (strings[j].charAt(i) != curr) {
+                    return prefix.toString();
+                }
+            }
+            prefix.append(curr);
+        }
+        return prefix.toString();
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number of strings: ");
+        int n = sc.nextInt();
+        sc.nextLine(); // Consume the newline character
+
+        String[] words = new String[n];
+        for (int i = 0; i < n; i++) {
+            System.out.print("Enter string " + (i + 1) + ": ");
+            words[i] = sc.nextLine();
+        }
+
+        String res = longestCommonPrefix(words);
+        System.out.println("Longest common prefix: " + res);
+    }
+}
