@@ -1,0 +1,29 @@
+class Solution {
+    public void setZeroes(int[][] matrix) {
+        int n = matrix.length;
+        int m = matrix[0].length;
+        
+        // Create two arrays to track rows and columns containing 0s
+        boolean[] rowHasZero = new boolean[n];
+        boolean[] colHasZero = new boolean[m];
+
+        // Iterate through the matrix to find 0s and mark corresponding rows and columns
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                if (matrix[i][j] == 0) {
+                    rowHasZero[i] = true;
+                    colHasZero[j] = true;
+                }
+            }
+        }
+
+        // Modify the matrix based on the marked rows and columns
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                if (rowHasZero[i] || colHasZero[j]) {
+                    matrix[i][j] = 0;
+                }
+            }
+        }
+    }
+}
