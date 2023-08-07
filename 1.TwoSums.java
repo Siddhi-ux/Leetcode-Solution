@@ -2,7 +2,7 @@ public class Solution {
     public int[] twoSum(int[] nums, int target) {
         int[] result = new int[2];
 
-        HashMap<Integer, Integer> index = new HashMap<Integer, Integer>();
+        HashMap<Integer, Integer> index = new HashMap<Integer, Integer>(); //HashMap
         for (int i = 0; i < nums.length; i ++) {
             if (index.containsKey(target - nums[i])) {
                 result[0] = index.get(target - nums[i]);
