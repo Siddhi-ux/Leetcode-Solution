@@ -1,3 +1,4 @@
+import java.util.*;
 class Solution {
   public int longestArithSeqLength(int[] nums) {
     final int n = nums.length;
