@@ -18,6 +18,7 @@ class Solution {
        while(j>=0){
            nums1[merge] = nums2[j];
            j--;
+           
            merge--;
        }
     }
