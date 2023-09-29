@@ -2,6 +2,7 @@ class Solution {
     public int findShortestSubArray(int[] nums) {
         Map<Integer,Integer> fm = new HashMap<>();
         Map<Integer, Integer> ic =new HashMap<>();
+        
         int d =0;
         int min =Integer.MAX_VALUE;
         for(int i=0;i<nums.length;i++){
