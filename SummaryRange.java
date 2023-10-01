@@ -2,6 +2,7 @@ class Solution {
     public List<String> summaryRanges(int[] nums) {
         List<String> ranges = new ArrayList<>();
 
+        
         if (nums == null || nums.length == 0) {
             return ranges;
         }
