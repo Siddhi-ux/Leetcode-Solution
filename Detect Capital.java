@@ -4,6 +4,7 @@ class Solution {
         for (char c : word.toCharArray()) {
             if(Character.isUpperCase(c)){
                 count++;
+                
             }
             if(count == 0 || count == word.length()){
                 return true;
