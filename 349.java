@@ -4,6 +4,7 @@ class Solution {
         int r=0;
         int len=nums2.length;
         int arr[] =new int[Math.min(len,n)];
+        
         boolean [] s=new boolean[1000];
         for(int i:nums1){s[i]=true;}
         for(int i:nums2){
