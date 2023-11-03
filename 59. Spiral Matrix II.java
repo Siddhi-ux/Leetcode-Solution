@@ -1,6 +1,7 @@
 class Solution {
     public int[][] generateMatrix(int n) {
         int[][] ans = new int[n][n];
+
         
         int r1 = 0, r2 = n-1, c1 = 0, c2 = n-1;
         
