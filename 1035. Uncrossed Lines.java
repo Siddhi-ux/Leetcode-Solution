@@ -3,6 +3,7 @@ class Solution {
   public int maxUncrossedLines(int[] nums1, int[] nums2) {
     final int m = nums1.length;
     final int n = nums2.length;
+    
     int[][] dp = new int[m + 1][n + 1];
 
     for (int i = 1; i <= m; ++i)
