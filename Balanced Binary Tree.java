@@ -3,6 +3,7 @@ class Solution {
         if(root == null) return true;
         if( Height(root) == -1) return false;
         return true;
+        
     }
     public int Height(TreeNode root){
         if(root == null) return 0;
