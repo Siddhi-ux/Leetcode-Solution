@@ -6,6 +6,7 @@ class Solution {
 
     public long mostPoints(int[][] questions) {
         n = questions.length;
+        
         f = new Long[n];
         this.questions = questions;
         return dfs(0);
