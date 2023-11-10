@@ -7,6 +7,7 @@ class Solution {
     Map<String, Map<String, Double>> graph = new HashMap<>();
 
     // Construct the graph.
+
     for (int i = 0; i < equations.size(); ++i) {
       final String A = equations.get(i).get(0);
       final String B = equations.get(i).get(1);
