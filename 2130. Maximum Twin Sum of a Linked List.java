@@ -3,6 +3,7 @@ class Solution {
     int ans = 0;
     ListNode slow = head;
     ListNode fast = head;
+    
 
     // Let slow point to the start of the second half
     while (fast != null && fast.next != null) {
