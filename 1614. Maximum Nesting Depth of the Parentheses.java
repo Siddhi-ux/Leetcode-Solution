@@ -3,6 +3,7 @@ class Solution {
         int depth =0;
         int curr=0;
         for(char c: s.toCharArray()){
+            
             if(c== '('){
                 curr++;
                 depth =Math.max(depth,curr);
