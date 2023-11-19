@@ -5,6 +5,7 @@ class Solution {
         for(char c: s.toCharArray()){
             
             if(c== '('){
+                
                 curr++;
                 depth =Math.max(depth,curr);
             }else if(c== ')'){
