@@ -10,6 +10,7 @@ class Solution {
             minPrice2 = Math.min(minPrice2, currPrice - profit1);
             profit2 = Math.max(profit2, currPrice - minPrice2);
 
+            
         }
 
         return profit2;
